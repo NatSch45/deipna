@@ -22,7 +22,7 @@ export function useForm<T extends Record<string, unknown>>(config: { [K in keyof
 
   function validateField<K extends keyof T>(field: K): boolean {
     const fieldConfig = config[field]
-    const value = values[field]
+    const value = (values as T)[field]
     ;(errors as Record<string, string>)[field as string] = ''
 
     if (fieldConfig.rules) {

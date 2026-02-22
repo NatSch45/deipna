@@ -119,7 +119,7 @@ const openingHours = ref<OpeningHours[]>(defaultOpeningHours())
        country: 'France',
      },
     cuisineTypes: cuisineTypes.value,
-    priceRange: priceRange.value,
+    priceRange: priceRange.value ?? undefined,
     features: features.value,
     openingHours: openingHours.value,
   }
